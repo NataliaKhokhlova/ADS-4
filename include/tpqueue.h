@@ -5,6 +5,7 @@
 
 template<typename T>
 class TPQueue {
+  
   private:
   T *arr;
   int size;
@@ -44,7 +45,6 @@ class TPQueue {
     end = stepForward(end);
     count++;
   }
-  
   T pop() {
     assert(count > 0);
     T item = arr[begin];
@@ -52,12 +52,10 @@ class TPQueue {
     begin = stepForward(begin);
     return item;
   }
-  
   T get() const {
     assert(count > 0);
     return arr[begin];
   }
-  
   bool isEmpty() const {
     return count == 0;
   }
